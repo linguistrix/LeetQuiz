@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://leetcode.com/problemset/ -->
+<html lang="en" class="dark" style="color-scheme: dark;">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@LeetCode">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="LeetCode">
+    <title>Problems - LeetCode</title>
+    <meta name="robots" content="index,follow">
+    <meta name="description"
+        content="Boost your coding interview skills and confidence by practicing real interview questions with LeetCode. Our platform offers a range of essential problems for practice, as well as the latest questions being asked by top-tier companies.">
+    <meta property="og:title" content="Problems - LeetCode">
+    <meta property="og:description"
+        content="Boost your coding interview skills and confidence by practicing real interview questions with LeetCode. Our platform offers a range of essential problems for practice, as well as the latest questions being asked by top-tier companies.">
+    <meta property="og:image" content="https://leetcode.com/static/images/LeetCode_Sharing.png">
+    <meta name="next-head-count" content="12">
+
+    <link rel="preload" href="./Problems - LeetCode_files/1a6c6d156a1772b3.css" as="style">
+    <link rel="stylesheet" href="./Problems - LeetCode_files/1a6c6d156a1772b3.css" data-n-g="">
+    <link rel="preload" href="./Problems - LeetCode_files/dc2fd5a0692eeb47.css" as="style">
+    <link rel="stylesheet" href="./Problems - LeetCode_files/dc2fd5a0692eeb47.css" data-n-p=""><noscript
+        data-n-css=""></noscript>
+    <script src="./assets/jquery.min.js"></script>
+    <script src="./assets/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="./assets/jquery.modal.min.css" />
+    <script src="./assets/script.js"></script>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body style="">
+    <div id="__next">
+        <script>!function () { try { var d = document.documentElement, c = d.classList; c.remove('light', 'dark'); var e = localStorage.getItem('lc-dark-side'); if ('system' === e || (!e && true)) { var t = '(prefers-color-scheme: dark)', m = window.matchMedia(t); if (m.media !== t || m.matches) { d.style.colorScheme = 'dark'; c.add('dark') } else { d.style.colorScheme = 'light'; c.add('light') } } else if (e) { c.add(e || '') } if (e === 'light' || e === 'dark') d.style.colorScheme = e } catch (e) { } }()</script>
+        <div class="flex min-h-screen min-w-[360px] flex-col text-label-1 dark:text-dark-label-1">
+            <div class="z-base-2 fixed left-0 right-0 top-0  md:relative bg-layer-1 dark:bg-dark-layer-1 z-nav-9"
+                id="navbar-container">
+                <nav id="leetcode-navbar"
+                    class="flex h-[50px] w-full items-center border-b-[1px] border-solid border-border-tertiary dark:border-border-tertiary z-nav-9 bg-layer-1 dark:bg-dark-layer-1 nav-bar-container">
+                    <div
+                        class="display-none m-auto h-[50px] w-full items-center justify-center px-6 md:flex max-w-[1200px]">
+                        <a class="mb-0.5 flex items-center mr-8"><span class="display-none h-[22px] dark:flex"><svg
+                                    width="95" height="111" viewBox="0 0 95 111" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="h-full w-auto max-w-none">
+                                    <path
+                                        d="M68.0063 83.0664C70.5 80.5764 74.5366 80.5829 77.0223 83.0809C79.508 85.579 79.5015 89.6226 77.0078 92.1127L65.9346 103.17C55.7187 113.371 39.06 113.519 28.6718 103.513C28.6117 103.456 23.9861 98.9201 8.72653 83.957C-1.42528 74.0029 -2.43665 58.0749 7.11648 47.8464L24.9282 28.7745C34.4095 18.6219 51.887 17.5122 62.7275 26.2789L78.9048 39.362C81.6444 41.5776 82.0723 45.5985 79.8606 48.3429C77.6488 51.0873 73.635 51.5159 70.8954 49.3003L54.7182 36.2173C49.0488 31.6325 39.1314 32.2622 34.2394 37.5006L16.4274 56.5727C11.7767 61.5522 12.2861 69.574 17.6456 74.8292C28.851 85.8169 37.4869 94.2846 37.4969 94.2942C42.8977 99.496 51.6304 99.4184 56.9331 94.1234L68.0063 83.0664Z"
+                                        fill="#FFA116"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M41.1067 72.0014C37.5858 72.0014 34.7314 69.1421 34.7314 65.615C34.7314 62.0879 37.5858 59.2286 41.1067 59.2286H88.1245C91.6454 59.2286 94.4997 62.0879 94.4997 65.615C94.4997 69.1421 91.6454 72.0014 88.1245 72.0014H41.1067Z"
+                                        fill="#B3B3B3"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M49.9118 2.02335C52.3173 -0.55232 56.3517 -0.686894 58.9228 1.72277C61.494 4.13244 61.6284 8.17385 59.2229 10.7495L16.4276 56.5729C11.7768 61.552 12.2861 69.5738 17.6453 74.8292L37.4088 94.2091C39.9249 96.6764 39.968 100.72 37.505 103.24C35.042 105.761 31.0056 105.804 28.4895 103.337L8.72593 83.9567C-1.42529 74.0021 -2.43665 58.0741 7.1169 47.8463L49.9118 2.02335Z"
+                                        fill="white"></path>
+                                </svg></span><span class="dark:display-none flex h-[22px]"><svg width="95" height="111"
+                                    viewBox="0 0 95 111" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-full w-auto max-w-none">
+                                    <path
+                                        d="M68.0063 83.0664C70.5 80.5764 74.5366 80.5829 77.0223 83.0809C79.508 85.579 79.5015 89.6226 77.0078 92.1127L65.9346 103.17C55.7187 113.371 39.06 113.519 28.6718 103.513C28.6117 103.456 23.9861 98.9201 8.72653 83.957C-1.42528 74.0029 -2.43665 58.0749 7.11648 47.8464L24.9282 28.7745C34.4095 18.6219 51.887 17.5122 62.7275 26.2789L78.9048 39.362C81.6444 41.5776 82.0723 45.5985 79.8606 48.3429C77.6488 51.0873 73.635 51.5159 70.8954 49.3003L54.7182 36.2173C49.0488 31.6325 39.1314 32.2622 34.2394 37.5006L16.4274 56.5727C11.7767 61.5522 12.2861 69.574 17.6456 74.8292C28.851 85.8169 37.4869 94.2846 37.4969 94.2942C42.8977 99.496 51.6304 99.4184 56.9331 94.1234L68.0063 83.0664Z"
+                                        fill="#FFA116"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M41.1067 72.0014C37.5858 72.0014 34.7314 69.1421 34.7314 65.615C34.7314 62.0879 37.5858 59.2286 41.1067 59.2286H88.1245C91.6454 59.2286 94.4997 62.0879 94.4997 65.615C94.4997 69.1421 91.6454 72.0014 88.1245 72.0014H41.1067Z"
+                                        fill="#B3B3B3"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M49.9118 2.02335C52.3173 -0.55232 56.3517 -0.686894 58.9228 1.72277C61.494 4.13244 61.6284 8.17385 59.2229 10.7495L16.4276 56.5729C11.7768 61.552 12.2861 69.5738 17.6453 74.8292L37.4088 94.2091C39.9249 96.6764 39.968 100.72 37.505 103.24C35.042 105.761 31.0056 105.804 28.4895 103.337L8.72593 83.9567C-1.42529 74.0021 -2.43665 58.0741 7.1169 47.8463L49.9118 2.02335Z"
+                                        fill="black"></path>
+                                </svg></span></a>
+                        <ul class="relative m-0 flex h-full grow items-center gap-6 self-end p-0">
+                            <li class="relative flex h-full items-center text-sm "><a
+                                    class="relative whitespace-nowrap hover:text-text-primary dark:hover:text-text-primary flex items-center text-base leading-[22px] cursor-pointer hover:text-text-primary dark:hover:text-text-primary text-text-secondary dark:text-text-secondary">Explore</a>
+                            </li>
+                            <li
+                                class="relative flex h-full items-center text-sm  nav-li-after border-text-primary dark:border-text-primary">
+                                <a
+                                    class="relative whitespace-nowrap hover:text-text-primary dark:hover:text-text-primary flex items-center text-base leading-[22px] cursor-pointer hover:text-text-primary dark:hover:text-text-primary font-medium text-text-primary dark:text-text-primary">Problems</a>
+                            </li>
+                            <li class="relative flex h-full items-center text-sm "><a
+                                    class="relative whitespace-nowrap hover:text-text-primary dark:hover:text-text-primary flex items-center text-base leading-[22px] cursor-pointer hover:text-text-primary dark:hover:text-text-primary text-text-secondary dark:text-text-secondary">Contest</a>
+                            </li>
+                            <li class="relative flex h-full items-center text-sm "><a
+                                    class="relative whitespace-nowrap hover:text-text-primary dark:hover:text-text-primary flex items-center text-base leading-[22px] cursor-pointer hover:text-text-primary dark:hover:text-text-primary text-text-secondary dark:text-text-secondary">Discuss</a>
+                            </li>
+                            <li class="relative flex h-full items-center text-sm ">
+                                <div
+                                    class="relative whitespace-nowrap hover:text-text-primary dark:hover:text-text-primary flex items-center text-base leading-[22px] cursor-pointer hover:text-text-primary dark:hover:text-text-primary text-text-secondary dark:text-text-secondary">
+                                    <span class="flex items-center focus:outline-none"><button class="contents"
+                                            id="headlessui-menu-button-:r0:" type="button" aria-haspopup="menu"
+                                            aria-expanded="false" data-headlessui-state="">Interview <svg
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em"
+                                                height="1em" fill="currentColor" class="ml-1 h-[14px] w-[14px]"
+                                                aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                    d="M4.929 7.913l7.078 7.057 7.064-7.057a1 1 0 111.414 1.414l-7.77 7.764a1 1 0 01-1.415 0L3.515 9.328a1 1 0 011.414-1.414z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg></button></span>
+                                </div>
+                            </li>
+                            <li class="relative flex h-full items-center text-sm ">
+                                <div
+                                    class="relative whitespace-nowrap hover:text-text-primary dark:hover:text-text-primary flex items-center text-base leading-[22px] cursor-pointer hover:text-text-primary dark:hover:text-text-primary text-text-secondary dark:text-text-secondary">
+                                    <span
+                                        class="flex items-center focus:outline-none !text-brand-orange border-brand-orange"><button
+                                            class="contents" id="headlessui-menu-button-:r1:" type="button"
+                                            aria-haspopup="menu" aria-expanded="false" data-headlessui-state="">Store
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em"
+                                                height="1em" fill="currentColor" class="ml-1 h-[14px] w-[14px]"
+                                                aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                    d="M4.929 7.913l7.078 7.057 7.064-7.057a1 1 0 111.414 1.414l-7.77 7.764a1 1 0 01-1.415 0L3.515 9.328a1 1 0 011.414-1.414z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg></button></span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="relative flex h-full items-center">
+                            <div class="relative flex items-center space-x-2">
+                                <div class="md:relative" data-headlessui-state=""><button
+                                        class="flex items-center focus:outline-none" aria-label="notification"
+                                        type="button" aria-expanded="false" data-headlessui-state=""
+                                        id="headlessui-popover-button-:r2f:">
+                                        <div
+                                            class="text-text-secondary dark:text-text-secondary hover:bg-fill-3 dark:hover:bg-dark-fill-3 rounded w-8 h-8 relative flex items-center justify-center group cursor-pointer focus:outline-none">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20"
+                                                height="20" fill="currentColor"
+                                                class="hover:text-text-primary dark:hover:text-text-primary ">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M6.20374 15.8174C6.18177 15.8563 6.15975 15.8945 6.13771 15.9322H17.8623C17.8403 15.8945 17.8182 15.8563 17.7963 15.8174C16.8756 14.1898 16.3333 12.0111 16.3333 9.21793C16.3333 6.93819 14.4012 5.07507 12 5.07507C9.5988 5.07507 7.66667 6.93819 7.66667 9.21793C7.66667 12.0111 7.12442 14.1898 6.20374 15.8174ZM20 17.9322H4.00001C3.00196 17.9322 2.61971 16.6307 3.45925 16.091C3.66114 15.9612 4.0464 15.5691 4.46294 14.8327C5.20893 13.5139 5.66667 11.6748 5.66667 9.21793C5.66667 5.81702 8.51018 3.07507 12 3.07507C15.4898 3.07507 18.3333 5.81702 18.3333 9.21793C18.3333 11.6748 18.7911 13.5139 19.5371 14.8327C19.9536 15.5691 20.3389 15.9612 20.5408 16.091C21.3803 16.6307 20.9981 17.9322 20 17.9322ZM12.9372 19.2783C13.2219 18.805 13.8363 18.6521 14.3096 18.9368C14.7828 19.2215 14.9357 19.836 14.651 20.3092C14.0976 21.2292 13.0875 21.7902 12 21.7902C10.9125 21.7902 9.90245 21.2292 9.34903 20.3092C9.06434 19.836 9.2172 19.2215 9.69045 18.9368C10.1637 18.6521 10.7781 18.805 11.0628 19.2783C11.2515 19.5919 11.6085 19.7902 12 19.7902C12.3915 19.7902 12.7485 19.5919 12.9372 19.2783Z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </button></div>
+                                <div class="popover-wrapper inline-block" data-headlessui-state="">
+                                    <div>
+                                        <div aria-expanded="false" data-headlessui-state=""
+                                            id="headlessui-popover-button-:r2h:"><a
+                                                class="group relative flex h-8 items-center justify-center rounded p-1 hover:bg-fill-3 dark:hover:bg-dark-fill-3"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width="1em"
+                                                    height="1em" fill="currentColor"
+                                                    class="h-[20px] w-[20px] hover:text-text-primary dark:hover:text-text-primary text-text-secondary dark:text-text-secondary">
+                                                    <path fill-rule="evenodd"
+                                                        d="M7.19 1.564a.75.75 0 01.729.069c2.137 1.475 3.373 3.558 3.981 5.002l.641-.663a.75.75 0 011.17.115c1.633 2.536 1.659 5.537.391 7.725-1.322 2.282-3.915 2.688-5.119 2.688-1.177 0-3.679-.203-5.12-2.688-.623-1.076-.951-2.29-.842-3.528.109-1.245.656-2.463 1.697-3.54.646-.67 1.129-1.592 1.468-2.492.337-.895.51-1.709.564-2.105a.75.75 0 01.44-.583zm.784 2.023c-.1.368-.226.773-.385 1.193-.375.997-.947 2.13-1.792 3.005-.821.851-1.205 1.754-1.282 2.63-.078.884.153 1.792.647 2.645C6.176 14.81 7.925 15 8.983 15c1.03 0 2.909-.366 3.822-1.94.839-1.449.97-3.446.11-5.315l-.785.812a.75.75 0 01-1.268-.345c-.192-.794-1.04-2.948-2.888-4.625z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg><span
+                                                    class="mx-1 text-sm font-medium hover:text-text-primary dark:hover:text-text-primary text-text-secondary dark:text-text-secondary">0</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px; display: none;">
+                                </div>
+                                <div>
+                                    <div class="relative"><button class="flex items-center focus:outline-none"
+                                            id="headlessui-menu-button-:r2j:" type="button" aria-haspopup="menu"
+                                            aria-expanded="false" data-headlessui-state=""><span id="navbar_user_avatar"
+                                                class="relative ml-1 h-6 w-6"><img
+                                                    src="./Problems - LeetCode_files/default_avatar.jpg" alt="avatar"
+                                                    class="h-full w-full rounded-full object-cover"></span></button>
+                                    </div>
+                                </div>
+                                <div class="ml-4"><a><span
+                                            class="display-none h-8 w-[84px] cursor-pointer  rounded-[8px] bg-[#ffa1161f] text-center leading-8 transition-colors hover:bg-[#ffa11633] lg:inline-block font-typo"><span
+                                                class="text-brand-orange">Premium</span></span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="md:!h-0" style="height: 50px;"></div>
+            <div class="z-nav flex w-full flex-col"></div>
+            <div
+                class="mx-auto w-full grow p-4 md:max-w-[888px] md:p-6 lg:max-w-screen-xl dark:bg-dark-layer-bg bg-white">
+                <div class="grid grid-cols-4 gap-4 md:grid-cols-3 lg:grid-cols-4 lg:gap-6">
+                    <!-- Questions Column -->
+                    <div class="z-base col-span-4 md:col-span-2 lg:col-span-3">
+                        <div class="mb-4 mt-8 gap-4 ml-10 flex flex-row overflow-hidden mb-8 gap-x-12 items-center">
+                            <div class="col">
+                                <div class="team-name">Team 1</div>
+                                <div class="score" data-team="1"></div>
+                                <div class="margin-top-20">
+                                    <button class="button-1 increase-5">+5</button>
+                                </div>
+                                <div class="margin-top-20">
+                                    <button class="button-1 increase-10">+10</button>
+                                </div>
+                                <div class="margin-top-20">
+                                    <button class="button-2 decrease-5">-5</button>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="team-name">Team 2</div>
+                                <div class="score" data-team="2"></div>
+                                <div class="margin-top-20">
+                                    <button class="button-1 increase-5">+5</button>
+                                </div>
+                                <div class="margin-top-20">
+                                    <button class="button-1 increase-10">+10</button>
+                                </div>
+                                <div class="margin-top-20">
+                                    <button class="button-2 decrease-5">-5</button>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="team-name">Team 3</div>
+                                <div class="score" data-team="3"></div>
+                                <div class="margin-top-20">
+                                    <button class="button-1 increase-5">+5</button>
+                                </div>
+                                <div class="margin-top-20">
+                                    <button class="button-1 increase-10">+10</button>
+                                </div>
+                                <div class="margin-top-20">
+                                    <button class="button-2 decrease-5">-5</button>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="team-name">Team 4</div>
+                                <div class="score" data-team="4"></div>
+                                <div class="margin-top-20">
+                                    <button class="button-1 increase-5">+5</button>
+                                </div>
+                                <div class="margin-top-20">
+                                    <button class="button-1 increase-10">+10</button>
+                                </div>
+                                <div class="margin-top-20">
+                                    <button class="button-2 decrease-5">-5</button>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="team-name">Team 5</div>
+                                <div class="score" data-team="5"></div>
+                                <div class="margin-top-20">
+                                    <button class="button-1 increase-5">+5</button>
+                                </div>
+                                <div class="margin-top-20">
+                                    <button class="button-1 increase-10">+10</button>
+                                </div>
+                                <div class="margin-top-20">
+                                    <button class="button-2 decrease-5">-5</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="-mx-4 transition-opacity md:mx-0">
+                                <div role="table" class="border-spacing-0 overflow-auto" style="min-width: 0px;">
+                                    <div class="inline-block min-w-full">
+                                        <div class="border-divider-border-2 dark:border-dark-divider-border-2 border-b">
+                                            <div role="row" style="display: flex; flex: 1 0 auto; min-width: 0px;">
+                                                <div colspan="1" role="columnheader"
+                                                    class="mx-2 py-[11px] font-normal text-label-3 dark:text-dark-label-3"
+                                                    style="box-sizing: border-box; flex: 52 0 auto; min-width: 0px; width: 52px;">
+                                                    <div class="flex items-center justify-between">
+                                                        <div class="overflow-hidden text-ellipsis">Status</div>
+                                                    </div>
+                                                </div>
+                                                <div colspan="1" role="columnheader"
+                                                    class="mx-2 py-[11px] font-normal text-label-3 dark:text-dark-label-3 hover:text-gray-7 dark:hover:text-dark-gray-7 group"
+                                                    style="box-sizing: border-box; flex: 260 0 auto; min-width: 0px; width: 260px; cursor: pointer;">
+                                                    <div class="flex items-center justify-between">
+                                                        <div class="overflow-hidden text-ellipsis">Title</div><span
+                                                            class="text-gray-5 dark:text-dark-gray-5 ml-2 h-3.5 w-3.5 group-hover:text-gray-7 dark:group-hover:text-dark-gray-7"><svg
+                                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                                width="1em" height="1em" fill="currentColor">
+                                                                <path
+                                                                    d="M18.695 9.378L12.83 3.769a1.137 1.137 0 00-.06-.054c-.489-.404-1.249-.377-1.7.06L5.303 9.381a.51.51 0 00-.16.366c0 .297.27.539.602.539h12.512a.64.64 0 00.411-.146.501.501 0 00.028-.762zM12.77 20.285c.021-.017.042-.035.062-.054l5.863-5.609a.5.5 0 00-.028-.762.64.64 0 00-.41-.146H5.743c-.332 0-.601.242-.601.54a.51.51 0 00.16.365l5.769 5.606c.45.437 1.21.464 1.698.06z">
+                                                                </path>
+                                                            </svg></span>
+                                                    </div>
+                                                </div>
+                                                <div colspan="1" role="columnheader"
+                                                    class="mx-2 py-[11px] font-normal text-label-3 dark:text-dark-label-3 hover:text-gray-7 dark:hover:text-dark-gray-7 group"
+                                                    style="box-sizing: border-box; flex: 84 0 auto; min-width: 0px; width: 84px; cursor: pointer;">
+                                                    <div class="flex items-center justify-between">
+                                                        <div class="overflow-hidden text-ellipsis">Difficulty</div><span
+                                                            class="text-gray-5 dark:text-dark-gray-5 ml-2 h-3.5 w-3.5 group-hover:text-gray-7 dark:group-hover:text-dark-gray-7"><svg
+                                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                                width="1em" height="1em" fill="currentColor">
+                                                                <path
+                                                                    d="M18.695 9.378L12.83 3.769a1.137 1.137 0 00-.06-.054c-.489-.404-1.249-.377-1.7.06L5.303 9.381a.51.51 0 00-.16.366c0 .297.27.539.602.539h12.512a.64.64 0 00.411-.146.501.501 0 00.028-.762zM12.77 20.285c.021-.017.042-.035.062-.054l5.863-5.609a.5.5 0 00-.028-.762.64.64 0 00-.41-.146H5.743c-.332 0-.601.242-.601.54a.51.51 0 00.16.365l5.769 5.606c.45.437 1.21.464 1.698.06z">
+                                                                </path>
+                                                            </svg></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div role="rowgroup"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="z-overlay fixed bottom-4 right-4 md:bottom-[31px] md:right-[30px]"><a aria-label="feedback"
+                        target="_blank" rel="noreferrer" data-state="closed">
+                        <div
+                            class="shadow-level1 dark:shadow-dark-level1 bg-layer-1 dark:bg-dark-layer-1 cursor-pointer group h-12 w-12 rounded-lg flex mb-3 last:mb-0">
+                            <div class="hover:bg-fill-4 dark:hover:bg-dark-fill-4 h-full w-full rounded-lg flex">
+                                <div class="w-6 m-auto"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        width="1em" height="1em" fill="currentColor"
+                                        class="w-full h-full text-blue-s dark:text-dark-blue-s">
+                                        <path fill-rule="evenodd"
+                                            d="M20.494 16.249a9.5 9.5 0 01-8.491 5.25 9.38 9.38 0 01-3.939-.855l-4.376.838a1 1 0 01-1.17-1.17l.838-4.376a9.377 9.377 0 01-.856-3.937 9.498 9.498 0 015.25-8.492A9.378 9.378 0 0112 2.5l.555.001c4.825.266 8.678 4.119 8.945 8.999v.497a9.381 9.381 0 01-1.006 4.252zM4.76 19.24l3.252-.622a1 1 0 01.64.09A7.382 7.382 0 0012 19.5a7.5 7.5 0 006.706-4.147A7.386 7.386 0 0019.5 12l.002-.445c-.21-3.807-3.25-6.847-7.002-7.055h-.502a7.385 7.385 0 00-3.35.794A7.5 7.5 0 004.5 12.002a7.38 7.38 0 00.793 3.347 1 1 0 01.09.639L4.76 19.24zM7.9 9.35c0 .718.58 1.3 1.294 1.3h.012c.715 0 1.294-.582 1.294-1.3 0-.718-.58-1.3-1.294-1.3h-.012c-.715 0-1.294.582-1.294 1.3zm6.893 1.3a1.297 1.297 0 01-1.293-1.3c0-.718.58-1.3 1.293-1.3h.014c.714 0 1.293.582 1.293 1.3 0 .718-.58 1.3-1.294 1.3h-.012zm.915 3.708a5.244 5.244 0 01-7.416 0 1 1 0 111.414-1.415 3.244 3.244 0 004.588 0 1 1 0 011.414 1.415z"
+                                            clip-rule="evenodd"></path>
+                                    </svg></div>
+                            </div>
+                        </div>
+                    </a></div>
+            </div>
+        </div>
+    </div>
+    <div id="modal-root-1">
+        <div id="question-pane" class="modal">
+            <table class="mb-2" style="width: 100%;">
+                <tr>
+                    <td>
+                        <span class="question-name"><b>Question</b></span>
+                    </td>
+                    <td style="text-align: right !important;">
+                        <span id="countdown-timer">45s</span>
+                    </td>
+                </tr>
+            </table>
+            <img id="question-img" src="slides/BAQC-Quiz-001.jpg">
+            <span id="extra-info" class="h-1 mt-2 mb-2" style="font-size: large;">Extra Info</span>
+            <br />
+            <b><a class="h-1 p-3 hover:text-blue-s dark:hover:text-dark-blue-s mt-2" style="font-size: large;"
+                    href="#answer-pane" rel="modal:open">
+                    Show the answer</a></b>
+
+        </div>
+    </div>
+    <div id="modal-root-2">
+        <div id="answer-pane" class="modal">
+            <p class="answer-name mb-2"><b>Answer</b></p>
+            <img id="answer-img" src="slides/BAQC-Quiz-002.jpg">
+            <!-- <a class="h-5 hover:text-blue-s dark:hover:text-dark-blue-s" href="#answer-pane" rel="modal:open">
+                ${obj.index}. ${obj.name}</a>
+            <a href="#" rel="modal:close">Close</a> -->
+        </div>
+    </div>
+</body>
+
+</html>
